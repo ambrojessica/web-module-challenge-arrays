@@ -60,8 +60,11 @@ Confirm that an array is exactly 31 flavors. Your function should accept:
 For Example: is31Flavors(originalFlavors) will return true if your code is working properly
 */
 
-function is31Flavors(/*your code here*/) {
+function is31Flavors(array) {
   /*your code here*/
+  if (array.length === 31) {
+    return true;
+  } else return false;
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -76,8 +79,14 @@ Use the addFlavor function below to do the following:
   For example: addFlavor(originalFlavors, "Rainbow Sherbert") should return the array ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"]
 */
 
-function addFlavor(/*your code here*/) {
+function addFlavor(array, flavor) {
   /*your code here*/
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].includes(flavor)) {
+      array.unshift(flavor, 1);
+    }
+  }
+  return array;
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -91,8 +100,15 @@ Use the removeLastFlavor function below to do the following:
   For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(/*your code here*/) {
+function removeLastFlavor(array, flavor) {
   /*your code here*/
+  let removeLast = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].includes(flavor)) {
+      removeLast.pop;
+    }
+  }
+  return removeLast;
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -125,8 +141,14 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/) {
+function removeFlavorByName(array, flavor) {
   /*your code here*/
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === flavor) {
+      array.splice(i, 1);
+    }
+  }
+  return array;
 }
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀

@@ -81,11 +81,7 @@ Use the addFlavor function below to do the following:
 
 function addFlavor(array, flavor) {
   /*your code here*/
-  for (let i = 0; i < array.length; i++) {
-    if (array[i].includes(flavor)) {
-      array.unshift(flavor, 1);
-    }
-  }
+  array.unshift(flavor);
   return array;
 }
 
@@ -102,13 +98,8 @@ Use the removeLastFlavor function below to do the following:
 
 function removeLastFlavor(array, flavor) {
   /*your code here*/
-  let removeLast = [];
-  for (let i = 0; i < array.length; i++) {
-    if (array[i].includes(flavor)) {
-      removeLast.pop;
-    }
-  }
-  return removeLast;
+  array.pop(flavor);
+  return array;
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -122,8 +113,9 @@ Use the getFlavorByIndex function below to do the following:
   For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/) {
+function getFlavorByIndex(array, number) {
   /*your code here*/
+  return array[number];
 }
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
